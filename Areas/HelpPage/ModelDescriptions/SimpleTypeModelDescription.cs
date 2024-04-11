@@ -1,0 +1,6 @@
+namespace ApiRestCurso.Areas.HelpPage.ModelDescriptions
+{
+    public class SimpleTypeModelDescription : ModelDescription
+    {
+    }
+}
