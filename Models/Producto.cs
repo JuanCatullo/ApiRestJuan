@@ -48,7 +48,7 @@ namespace ApiRestCurso.Models
                     Producto.Descripcion = row["Descripcion"].ToString();
                     Producto.Precio = decimal.Parse(row["Precio"].ToString());
                     Producto.Stock = int.Parse(row["Stock"].ToString());
-                    Producto.id_categoria = int.Parse(row["id_categoria"].ToString());
+                  
                     Producto.DescripcionError = "";
 
                     ListaProductos.Add(Producto);
@@ -139,7 +139,7 @@ namespace ApiRestCurso.Models
 
 
                 MySqlCommand.Parameters.AddWithValue("@Nombre", nuevoProducto.Nombre);
-                MySqlCommand.Parameters.AddWithValue("@Descripción", nuevoProducto.Descripcion);
+                MySqlCommand.Parameters.AddWithValue("@descripcion", nuevoProducto.Descripcion);
                 MySqlCommand.Parameters.AddWithValue("@Precio", nuevoProducto.Precio);
                 MySqlCommand.Parameters.AddWithValue("@Stock", nuevoProducto.Stock);
                 MySqlCommand.Parameters.AddWithValue("@id_categoria", nuevoProducto.id_categoria);
@@ -306,6 +306,10 @@ namespace ApiRestCurso.Models
 
             return sRet;
         }
+
+
+
+
 
         public static string InsertarCategoriaProducto(int iProductoID, int id_categoria)
         {

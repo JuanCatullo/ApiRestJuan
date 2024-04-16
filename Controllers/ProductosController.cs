@@ -158,7 +158,7 @@ namespace ApiRestCurso.Controllers
             return ListaCategorias;
         }
 
-     
+
 
         [HttpPost]
         [System.Web.Http.Route("ApiRestCurso/AgregarCategoriaProducto")]
@@ -221,5 +221,3 @@ namespace ApiRestCurso.Controllers
 
     }
 }
-
-
