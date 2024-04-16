@@ -229,7 +229,6 @@ namespace ApiRestCurso.Models
         public static string EliminarProducto(int id)
         {
             string sRet = "";
-
             SqlConnection MyConnection = default(SqlConnection);
             SqlCommand MySqlCommand = default(SqlCommand);
 
@@ -241,7 +240,7 @@ namespace ApiRestCurso.Models
 
 
 
-                MySqlCommand.Parameters.AddWithValue("@id", id);
+                MySqlCommand.Parameters.AddWithValue("@IdProductos", id);
 
 
 
