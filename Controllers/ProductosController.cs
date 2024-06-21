@@ -160,8 +160,10 @@ namespace ApiRestCurso.Controllers
 
 
 
-        [HttpPost]
-        [System.Web.Http.Route("ApiRestCurso/AgregarCategoriaProducto")]
+      
+
+        [HttpDelete]
+        [System.Web.Http.Route("api/EliminarCategoriaProducto")]
         public IHttpActionResult EliminarCategoriaProducto(int id_producto, int id_categoria)
         {
             string sRet = "";
@@ -179,7 +181,7 @@ namespace ApiRestCurso.Controllers
             return Ok("Se borro");
         }
 
-        // DELETE api/<controller>/5
+      
         [HttpPost]
         [System.Web.Http.Route("api/AgregarCategoriaProducto")]
         public IHttpActionResult AgregarCategoriaProducto(int producto_id, int categoria_id)
